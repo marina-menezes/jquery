@@ -1,3 +1,5 @@
+![Screenshot](assets/images/screenshot.png)
+
 # jQuery
 "write less, do more"
 - Biblioteca de JavaScript
