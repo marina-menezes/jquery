@@ -105,4 +105,86 @@ $(document).ready(function(){
 
       })
 
+      //TODO: incrementar a validação
+      // - checar se o nome é válido (mais de 2 caracteres)
+      // - checar se o email é válido com ao menos um "@" e "."
+      // - checar se o cpf é válido com regex
+
+      function validate(elem){
+         if(elem.val() == ''){
+            console.log(''+ elem.attr('name') +' field required')
+
+            elem.parent().find('.text-muted').show()
+
+            elem.addClass('invalid')
+
+            return false
+         } else {
+            elem.parent().find('.text-muted').hide()
+            elem.removeClass('invalid')
+         }
+      }
+
+      $('body').on('submit', '.modal-body .form', function(e){
+
+         e.preventDefault()
+
+         const inputName = $('#name')
+         const inputEmail = $('#email')
+
+         validate(inputName)
+         validate(inputEmail)
+
+         if(inputEmail.hasClass('invalid') || inputName.hasClass('invalid')){
+            console.log('check required fields')
+            return false
+         } else {
+            $(this).submit()
+         }
+
+      })
+
+      $('body').on('blur', '#name', function(){
+         validate($(this))
+      })
+
+      $('body').on('blur', '#email', function(){
+         validate($(this))
+      })
+
+      $('body').on('focus', '#date', function(){
+         $(this).datepicker()
+      })
+
+      $('body').on('blur', '#date', function(){
+         validate($(this))
+         $(this).mask('00/00/0000');
+
+      })
+
+      $('body').on('blur', '#time', function(){
+         validate($(this))
+         $(this).mask('00:00');
+
+      })
+
+      $('body').on('blur', '#cep', function(){
+         validate($(this))
+         $(this).mask('00000-000');
+
+      })
+
+      $('body').on('blur', '#phone', function(){
+         validate($(this))
+         $(this).mask('00000-0000');
+
+      })
+
+      $('body').on('blur', '#cpf', function(){
+         validate($(this))
+         $(this).mask('000.000.000-00');
+
+      })
+
+
 })

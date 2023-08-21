@@ -858,3 +858,11 @@ a {
 		margin-left: 15px;
 	}
 }
+
+.invalid {
+	border-color: #F00;
+}
+
+.text-muted {
+	display: none;
+}

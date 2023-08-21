@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./vendor/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="./vendor/owl/css/owl.css">
     <link rel="stylesheet" href="./vendor/fontawesome/fontawesome.css">
+    <link rel="stylesheet" href="./vendor/jquery-ui/jquery-ui.min.css">
     <link rel="stylesheet" href="./css/style.css">
     <title>jQuery</title>
 </head>
@@ -219,7 +220,7 @@
     
     <!-- Modal Body -->
     <div class="modal fade" id="modalId" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm" role="document">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-md" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="modalTitleId">Modal title</h5>
@@ -242,9 +243,39 @@
             </div>
 
             <div class="mb-3">
-                <label for="e-mail" class="form-label">e-mail</label>
-                <input type="text" e-mail="e-mail" id="e-mail" class="form-control" placeholder="Type your e-mail" aria-describedby="helpEmail">
+                <label for="email" class="form-label">e-mail</label>
+                <input type="text" name="email" id="email" class="form-control" placeholder="Type your e-mail" aria-describedby="helpEmail">
                 <small id="helpEmail" class="text-muted">Type a valid e-mail</small>
+            </div>
+
+            <div class="mb-3">
+                <label for="date" class="form-label">Date</label>
+                <input type="text" name="date" id="date" class="form-control" placeholder="Type your date" aria-describedby="helpDate">
+                <small id="helpDate" class="text-muted">Type a valid date</small>
+            </div>
+
+            <div class="mb-3">
+                <label for="time" class="form-label">Time</label>
+                <input type="text" name="time" id="time" class="form-control" placeholder="Type your time" aria-describedby="helpTime">
+                <small id="helpTime" class="text-muted">Type a valid time</small>
+            </div>
+
+            <div class="mb-3">
+                <label for="cep" class="form-label">CEP</label>
+                <input type="text" name="email" id="cep" class="form-control" placeholder="Type your cep" aria-describedby="helpCep">
+                <small id="helpCep" class="text-muted">Type a valid cep</small>
+            </div>
+
+            <div class="mb-3">
+                <label for="phone" class="form-label">Phone</label>
+                <input type="text" name="phone" id="phone" class="form-control" placeholder="Type your phone" aria-describedby="helpPhone">
+                <small id="helpPhone" class="text-muted">Type a valid phone</small>
+            </div>
+
+            <div class="mb-3">
+                <label for="cpf" class="form-label">CPF</label>
+                <input type="text" name="cpf" id="cpf" class="form-control" placeholder="Type your CPF" aria-describedby="helpCPF" required>
+                <small id="helpCPF" class="text-muted">Type a valid cpf</small>
             </div>
 
             <button type="submit" class="btn btn-primary">Send</button>
@@ -259,9 +290,13 @@
 
     </div>
 
+    <!-- Library -->
     <script src="./vendor/jquery/jquery-3.6.0.min.js"></script>
     <script src="./vendor/bootstrap/js/bootstrap.min.js"></script>
     <script src="./vendor/owl/js/owl.js"></script>
+    <script src="./vendor/jquery-mask/jquery.mask.min.js"></script>
+    <script src="./vendor/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Custom Script -->
     <script src="./js/custom.js"></script>
     
 </body>
